@@ -1,0 +1,32 @@
+# LocalStack data/cache
+.localstack/
+localstack/.localstack/
+volume/
+
+# Terraform files
+.terraform/
+*.tfstate
+*.tfstate.*
+.terraform.lock.hcl
+crash.log
+
+# LocalStack CLI downloads
+localstack-cli-*.tar.gz
+
+# Environment files
+.env
+.env.*
+
+# Logs
+*.log
+
+# OS/editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Temporary files
+*.tmp
+*.swp
+*.bak
