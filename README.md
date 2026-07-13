@@ -11,13 +11,14 @@ and demonstrates an asynchronous messaging workflow using Amazon SQS.
 
 ├── terraform/
 │   ├── provider.tf
-│   ├── networking.tf
-│   ├── security_groups.tf
+│   ├── network.tf
+│   ├── security.tf
 │   ├── ec2.tf
-│   ├── apigateway.tf
-│   ├── sqs.tf
+│   ├── api_gateway.tf
+│   ├── messaging.tf
 │   ├── dynamodb.tf
-│   ├── s3.tf
+│   ├── storage.tf
+│   ├── iam.tf
 │   ├── logs.tf
 │   ├── outputs.tf
 │   └── variables.tf
