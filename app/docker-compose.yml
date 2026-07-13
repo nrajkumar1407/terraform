@@ -1,0 +1,23 @@
+services:
+
+  api:
+    build:
+      context: ./api
+    ports:
+      - "8000:8000"
+    environment:
+      AWS_ENDPOINT_URL: http://172.17.0.1:4566
+      AWS_ACCESS_KEY_ID: test
+      AWS_SECRET_ACCESS_KEY: test
+      AWS_DEFAULT_REGION: us-east-1
+      QUEUE_URL: http://172.17.0.1:4566/000000000000/job-processing-queue
+
+  worker:
+    build:
+      context: ./worker
+    environment:
+      AWS_ENDPOINT_URL: http://172.17.0.1:4566
+      AWS_ACCESS_KEY_ID: test
+      AWS_SECRET_ACCESS_KEY: test
+      AWS_DEFAULT_REGION: us-east-1
+      QUEUE_URL: http://sqs.us-east-1.localhost.localstack.cloud:4566/000000000000/job-processing-queue
